@@ -16,17 +16,29 @@ reader.question("What would you like to calculate?", function(input){
 	num3 = Number(tokens[3]);
 
 	if (mathSymbol === '+'){
-		console.log(num1 + num2);
-		console.log(num1 + num2 + num3);
+		if (!num3) {
+			console.log(num1 + num2);
+		} else {
+			console.log(num1 + num2 + num3);
+		}
 	} else if (mathSymbol === '-'){
-		console.log(num1 - num2);
-		console.log(num1 - num2 - num3);
+		if (!num3) {
+			console.log(num1 - num2);
+		} else {
+			console.log(num1 - num2 - num3);
+		}
 	} else if (mathSymbol === '*') {
-		console.log(num1 * num2);
-		console.log(num1 * num2 * num3);
+		if (!num3) {
+			console.log(num1 * num2);
+		} else {
+			console.log(num1 * num2 * num3);
+		}
 	} else if (mathSymbol === '/') {
-		console.log(num1 / num2);
-		console.log(num1 / num2 / num3);
+		if (!num3) {
+			console.log(num1 / num2);
+		} else {
+			console.log(num1 / num2 / num3);
+		}
 	} else if (mathSymbol === 'sqrt') {
 		console.log(Math.sqrt(num1));
 		console.log(Math.sqrt(num2));
@@ -40,13 +52,18 @@ reader.question("What would you like to calculate?", function(input){
 		console.log(num2 * num2 * num2);
 		console.log(num3 * num3 * num3);
 	} else if (mathSymbol === '^') {
-		console.log(Math.pow(num1, num2));
-		console.log(Math.pow(Math.pow(num1, num2)), num3);
+		if (!num3){
+			console.log(Math.pow(num1, num2));
+		} else {
+			console.log(Math.pow(Math.pow(num1, num2)), num3);
+		}
 	} else if (mathSymbol === '%') {
+		if (!num3) {
 			console.log(num1 % num2);
+		} else {
 			console.log(num1 % num2 % num3);
-	} 
-	else {
+		}		
+	} else {
 		console.log('The calculator does not recognize your math symbol.')
 	}
 

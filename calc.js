@@ -30,7 +30,10 @@ reader.question("What would you like to calculate?", function(input){
 		console.log(num1 * num1 * num1);
 	} else if (mathSymbol === '^') {
 		console.log(Math.pow(num1, num2));
-	} else {
+	} else if (mathSymbol === '%') {
+		console.log(num1 % num2);
+	} 
+	else {
 		console.log('The calculator does not recognize your math symbol.')
 	}
 
